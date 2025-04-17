@@ -14,6 +14,6 @@ public class ReservationRestaurant extends Reservation{
 		String service = "";
 		if (num_service == 1) service = "premier";
 		if (num_service == 2) service = "deuxième";
-		return("Le " + jour + "/" + mois + "\nTable " + num_table + " pour le "+ service +" service.");
+		return("Le " + jour + "/" + mois + "\nTable " + (num_table) + " pour le "+ service +" service.");
 	}
 }

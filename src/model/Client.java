@@ -7,14 +7,24 @@ public class Client {
 	private String mdp;
 
 //	A décommenter pour la question6
-//	private Reservation[] reservations = new Reservation[100]; 
-//	private int nbReservation = 0;
+	private Reservation[] reservations = new Reservation[100]; 
+	private int nbReservation = 0;
 
 	public Client(String nom, String prenom, String adresseMail, String mdp) {
 		this.nom = nom;
 		this.prenom = prenom;
 		this.adresseMail = adresseMail;
 		this.mdp = mdp;
+	}
+	
+	public String getReservations() {
+		StringBuilder res = new StringBuilder();
+		res.append("Le client " + prenom + " " + nom + " possède ces reservations:\n");
+		for (int i = 0; i<nbReservation ; i++) {
+			res.append(reservations[i].toString());
+		}
+		
+		return res.toString();
 	}
 
 	public String getAdresseMail() {
@@ -26,10 +36,10 @@ public class Client {
 	}
 
 //	A décommenter pour la question6
-//	public void ajouterReservation(Reservation reservation) {
-//		this.reservations[nbReservation] = reservation;
-//		nbReservation++;
-//	}
+	public void ajouterReservation(Reservation reservation) {
+		this.reservations[nbReservation] = reservation;
+		nbReservation++;
+	}
 	
 	// UNIQUEMENT POUR VERIFICATION
 	@Override

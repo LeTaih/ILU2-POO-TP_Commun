@@ -25,6 +25,7 @@ class RestaurantTest {
 	@Test
 	void testDonnerPossibilites() {
 		int[] possibilites = restaurant.donnerPossibilites(formulaire);
+
 		int[] expected = { 0, 2, 3, 0, 0, 0 };
 		assertArrayEquals(expected, possibilites,"Les tables numeros 2 et 3 devraient pouvoir être choisi");
 
